@@ -1,0 +1,115 @@
+.card {
+    font-weight: bold;
+    font-size: larger;
+    fieldset {
+        margin: 15px;
+        border: 2px solid black;
+        padding: 12px;
+        display: flex;
+        legend {
+            color: black;
+            font-size: 25px;
+            display: inline-block;
+            padding: 6px;
+            text-align: center;
+            width: auto;
+        }
+        .block {
+            margin: 7px;
+        }
+    }
+}
+
+.listBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__content {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+
+    &__buttons {
+        display: flex;
+        .btn {
+            margin: 0px 5px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .listBlock {
+        flex-direction: column;
+        &__content {
+            display: grid;
+            grid-template-columns: auto;
+            gap: 10px;
+            .item {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.bg-white {
+    background: rgb(93, 85, 85);
+    background: linear-gradient(
+        0deg,
+        rgba(93, 85, 85, 1) 23%,
+        rgba(135, 134, 139, 1) 70%
+    ) !important;
+    .nav-link {
+        color: white !important;
+    }
+    .navbar-brand {
+        color: white;
+    }
+}
+
+.pb-4,
+.py-4 {
+    background-color: rgb(182, 169, 169);
+
+    .card-header {
+        color: white;
+        background: rgb(93, 85, 85);
+        background: linear-gradient(
+            0deg,
+            rgba(93, 85, 85, 1) 23%,
+            rgba(135, 134, 139, 1) 70%
+        );
+    }
+    .card {
+        border: 1px solid rgba(93, 85, 85, 1);
+        box-shadow: 1px 3px 5px rgba(93, 85, 85, 1);
+        margin-bottom: 150px;
+        .pagination {
+            .page-link {
+                background-color: rgb(126, 123, 123);
+                color: white;
+            }
+        }
+        form {
+            background-color: rgb(214, 203, 203);
+        }
+        .card-body {
+            background-color: rgb(214, 203, 203);
+            .list-group-item {
+                background-color: rgb(238, 227, 227);
+                form {
+                    background-color: rgb(238, 227, 227);
+                }
+                p {
+                    padding: 10px;
+                    margin: 0;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
