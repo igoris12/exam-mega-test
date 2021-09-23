@@ -9,7 +9,7 @@ use Validator;
 
 class ParcelController extends Controller
 {
-     const RESULTS_IN_PAGE = 10;
+     const RESULTS_IN_PAGE = 3;
 
     public function __construct()
     {
