@@ -16,22 +16,15 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="form-label">Runs</label>
-                                    <input class="form-control" type="text" name="post_runs"
-                                        value="{{ old('post_runs') }}">
+                                    <label class="form-label">Capacity</label>
+                                    <input class="form-control" type="text" name="post_capacity"
+                                        value="{{ old('post_capacity') }}">
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="form-label">Wins</label>
-                                    <input class="form-control" type="text" name="post_wins"
-                                        value="{{ old('post_wins') }}">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="form-label">About</label>
-                                    <textarea id="summernote" name="post_about">
-                                                                {{ old('post_about') }}
-                                                        </textarea>
+                                    <label class="form-label">Code</label>
+                                    <input class="form-control" type="text" name="post_code"
+                                        value="{{ old('post_code') }}">
                                 </div>
                                 @csrf
                                 <button type="submit" class="btn btn-secondary">Add</button>

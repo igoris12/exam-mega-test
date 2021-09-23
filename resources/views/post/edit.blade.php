@@ -5,34 +5,27 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Edit horses</div>
+                    <div class="card-header">Edit posts</div>
                     <div class="card-body">
                         <div class="block__form">
-                            <form method="POST" action="{{ route('horse.update', [$horse]) }}">
+                            <form method="POST" action="{{ route('post.update', [$post]) }}">
                                 <div class="form-group">
-                                    <label class="form-label">Name</label>
-                                    <input class="form-control" type="text" name="horse_name"
-                                        value="{{ old('horse_name', $horse->name) }}">
+                                    <label class="form-label">Town</label>
+                                    <input class="form-control" type="text" name="post_town"
+                                        value="{{ old('post_town', $post->town) }}">
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="form-label">Runs</label>
-                                    <input class="form-control" type="text" name="horse_runs"
-                                        value="{{ old('horse_runs', $horse->runs) }}">
+                                    <label class="form-label">Capacity</label>
+                                    <input class="form-control" type="text" name="post_capacity"
+                                        value="{{ old('post_capacity', $post->capacity) }}">
                                 </div>
 
 
                                 <div class="form-group">
-                                    <label class="form-label">Wins</label>
-                                    <input class="form-control" type="text" name="horse_wins"
-                                        value="{{ old('horse_wins', $horse->wins) }}">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="form-label">About</label>
-                                    <textarea id="summernote" name="horse_about">
-                                                        {{ old('horse_about', $horse->about) }}
-                                                    </textarea>
+                                    <label class="form-label">Code</label>
+                                    <input class="form-control" type="text" name="post_code"
+                                        value="{{ old('post_code', $post->code) }}">
                                 </div>
 
                                 @csrf
@@ -51,4 +44,4 @@
 
     @endsection
 
-    @section('title') Edit horses @endsection
+    @section('title') Edit posts @endsection
