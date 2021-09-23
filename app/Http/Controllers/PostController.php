@@ -126,20 +126,20 @@ class PostController extends Controller
 
     }
 
-    // /**
-    //  * Remove the specified resource from storage.
-    //  *
-    //  * @param  \App\Models\post  $post
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function destroy(post $post)
-    // {
-    //     if($post->getBetter->count()){
-    //    return redirect()->route('post.index')->with('info_message', 'Post cant be deleted.');
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\post  $post
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(post $post)
+    {
+        if($post->getParcels->count()){
+       return redirect()->route('post.index')->with('info_message', 'Post cant be deleted.');
 
 
-    //    }
-    //    $post->delete();
-    //    return redirect()->route('post.index')->with('success_message', 'Delete was successful.');
-    // }
+       }
+       $post->delete();
+       return redirect()->route('post.index')->with('success_message', 'Delete was successful.');
+    }
 }

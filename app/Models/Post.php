@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+           public function getParcels()
+   {
+       return $this->hasMany('App\Models\Parcel', 'post_id', 'id');
+   }
 }
